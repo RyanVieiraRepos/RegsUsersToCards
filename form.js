@@ -32,7 +32,7 @@ const fSendUser = async () => {
 
 
 const fGetUsers = async () => {
-    const APIusers = "https://consuming-an-api.vercel.app/exibir"
+    const APIusers = "https://consuming-an-api.vercel.app/getUsers"
     const local = "http://localhost:3000/getUsers"
 
     const users = fetch(APIusers)
