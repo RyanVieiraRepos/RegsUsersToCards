@@ -17,13 +17,34 @@ body {
 }
 
 
+.card {
+    background-color: white;
+
+    padding: 10px;
+    width: 300PX;
+
+    display: flex;
+    flex-direction: column;
+    border-top: 20px SOLID rgb(109, 90, 33);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+
+
+}
+
+.descCont {
+    overflow: scroll;
+    font-size: 1rem;
+}
+
+.card strong:nth-child(1) {
+    font-size: 1.2rem;
+}
+
 
 form {
     display: flex;
     flex-direction: column;
-
-
-
     padding: 30px;
     border-radius: 10px;
 
@@ -31,11 +52,11 @@ form {
     background-color: rgb(255, 255, 255);
 
     height: 380px;
-
     box-shadow: rgba(57, 57, 57, 0.35) 0px 5px 15px;
+    margin-bottom: 100px;
 }
 
-strong {
+form strong {
     color: rgb(58, 53, 40);
     font-size: 1.7rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -75,7 +96,7 @@ button {
 
     height: 50px;
 
-    border-radius: 16px;
+    border-radius: 9px;
     border: 0px;
 
     cursor: pointer;

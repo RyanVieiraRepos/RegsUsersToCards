@@ -1,7 +1,4 @@
-
-
-
-
+var usersArray = []
 
 
 const fForm = () => {
@@ -30,16 +27,47 @@ const fForm = () => {
 
 const fSendUser = async () => {
     const APIreg = "https://consuming-an-api.vercel.app/registrar"
-    console.log('enviando')
+
 }
 
 
-const fReceiveUsers = async () => {
+const fGetUsers = async () => {
     const APIusers = "https://consuming-an-api.vercel.app/exibir"
-    fetch(APIusers)
+    const local = "http://localhost:3000/getUsers"
+
+    const users = fetch(APIusers)
+
+        .then(response => {
+            response.json().then(json => {
+                console.log(json),
+                    document.querySelector('body').innerHTML +=
+                    `
+                    <div class='card'>
+                       <strong>${json.nome}</strong>
+                    <strong>${json.idade} anos de idade</strong>
+   <div class='descCont'>
+                    <strong>${json.descrição}</strong>
+   </div>
+                    </div
+                    `
+
+            })
+
+                .catch(error => console.log('No response'))
+
+        });
+
 }
 
-fReceiveUsers()
+const fRenderCards = () => {
+
+}
+
+fGetUsers()
+
+
+
+
 
 document.getElementById('enviarBotao').addEventListener('click', () => {
     fForm()
