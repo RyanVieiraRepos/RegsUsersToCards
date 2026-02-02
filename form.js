@@ -1,4 +1,8 @@
-var usersArray = []
+var usersArr = []
+
+
+
+
 
 
 const fForm = () => {
@@ -27,7 +31,7 @@ const fForm = () => {
 
 const fSendUser = async () => {
     const APIreg = "https://consuming-an-api.vercel.app/registrar"
-
+    
 }
 
 
@@ -35,33 +39,47 @@ const fGetUsers = async () => {
     const APIusers = "https://consuming-an-api.vercel.app/getUsers"
     const local = "http://localhost:3000/getUsers"
 
-    const users = fetch(APIusers)
-
+    fetch(APIusers)
         .then(response => {
-            response.json().then(json => {
-                console.log(json),
-                    document.querySelector('body').innerHTML +=
-                    `
-                    <div class='card'>
-                       <strong>${json.nome}</strong>
-                    <strong>${json.idade} anos de idade</strong>
-   <div class='descCont'>
-                    <strong>${json.descrição}</strong>
-   </div>
-                    </div
-                    `
 
-            })
+            response.json()
+                .then(json => {
+                    usersArr.push(json)
+                    console.log(usersArr)
+                    fRenderCards()
+                })
+        }).catch(err => console.error(err));
 
-                .catch(error => console.log('No response'))
-
-        });
 
 }
 
 const fRenderCards = () => {
 
+    const container = document.getElementById('cardsContainer')
+
+    container.innerHTML = '';
+
+    usersArr.forEach((user) => {
+
+
+        container.innerHTML += `
+           <div class='card'>
+                    <strong>${user.nome}</strong>
+                    <strong>${user.idade} anos de idade</strong>
+                <div class='descCont'>
+                    <strong>${user.descrição}</strong>
+                </div>
+            </div>
+    `
+    }
+
+    )
+    console.log('rendering...' + usersArr)
 }
+
+
+
+
 
 fGetUsers()
 
