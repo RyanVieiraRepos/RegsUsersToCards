@@ -11,36 +11,42 @@
 
 <body>
     <div class="header">
-        <img src="./images/software-engineer.png" alt="logo">
+        <strong>Rock and roll</strong>
         <strong>Home</strong>
     </div>
 
 
 
 
+    <div class="mainContainer">
 
-    <form>
-        <strong>Cadastro</strong>
-        <input placeholder="Nome" id="nome" />
-        <input placeholder="Sobrenome" id="sobrenome" />
-        <input placeholder="Email" id="email" />
-        <input placeholder="Descrição" id="sobre" />
+        <form>
+            <strong>Cadastro</strong>
+            <input placeholder="Nome" id="nome" />
+            <input placeholder="Sobrenome" id="sobrenome" />
+            <input placeholder="Email" id="email" />
+            <input placeholder="Descrição" id="sobre" />
 
-        <button type="button" id="enviarBotao">
-            Registrar
-        </button>
-        <span id="fillEm">Preencha todos os campos!</span>
-    </form>
+            <button type="button" id="enviarBotao">
+                Registrar
+            </button>
+            <span id="fillEm">Preencha todos os campos!</span>
+        </form>
 
-    <div class="lineContainer">
+        <div style="display:flex;flex-direction: column;; align-items: center;">
+            <div class="lineContainer">
 
-        <strong>Usuários</strong>
+                <strong>Usuários</strong>
+
+            </div>
+            <div class="cardsContainer" id="cardsContainer">
+
+                <img src="./loading.gif">
+            </div>
+        </div>
 
     </div>
 
-    <div class="cardsContainer" id="cardsContainer">
-
-    </div>
 
 
 

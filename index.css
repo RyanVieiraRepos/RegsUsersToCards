@@ -8,7 +8,9 @@ body {
     flex: 1;
     min-height: 100vh;
 
-    background: linear-gradient(120deg, rgb(20, 20, 20), rgb(26, 26, 26));
+
+    margin: 0px;
+    background: linear-gradient(120deg, rgb(142, 121, 94), rgb(151, 140, 98));
 
 
     -webkit-font-smoothing: antialiased;
@@ -23,32 +25,43 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    height: 100px;
+
+    height: 60px;
+
+
+
+
+    border-radius: 5px;
 
 }
 
-.header img {
-    width: 100px;
-    margin-left: 2vw;
-    margin-top: 1vw;
-}
+
 
 .header strong {
-    color: rgb(156, 106, 185);
-    margin-right: 2vw;
+    color: rgb(238, 238, 238);
     font-size: 1.6rem;
-    transition: 0.1s;
+    transition: 0.3s;
     cursor: pointer;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .header strong:hover {
-    transform: scale(1.08);
-    border-bottom: 1px solid rgb(156, 106, 185);
+
+    color: rgb(62, 52, 39);
 }
 
 
 
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
+    width: 100%;
+
+    margin-top: 6vw;
+}
 
 
 
@@ -56,14 +69,14 @@ body {
 
 
 .card {
-    background-color: white;
+    background-color: rgb(239, 239, 239);
 
     padding: 10px;
     width: 300PX;
 
     display: flex;
     flex-direction: column;
-    border-top: 20px SOLID rgb(156, 106, 185);
+    border-top: 20px SOLID rgb(138, 120, 89);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
 
@@ -118,16 +131,16 @@ form {
     border-radius: 10px;
 
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(231, 231, 231);
 
     height: 380px;
-    box-shadow: rgba(57, 57, 57, 0.35) 0px 5px 15px;
-    margin-bottom: 100px;
-    margin-top: 150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
 }
 
 form strong {
-    color: rgb(58, 53, 40);
+    color: rgb(71, 63, 45);
     font-size: 1.7rem;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -141,13 +154,13 @@ input {
     padding-left: 4px;
     margin: 10px;
 
-    border: 0px solid rgb(194, 194, 194);
-    border-bottom: 1px solid rgb(88, 77, 66);
+    border: 0px solid rgb(41, 35, 35);
+    border-bottom: 1px solid rgb(48, 47, 42);
 
-    background-color: rgb(255, 255, 255);
+    background: none;
 
 
-    color: rgb(94, 82, 69);
+    color: rgb(49, 46, 41);
     font-size: 1.02rem;
     font-weight: 600;
 
@@ -157,7 +170,7 @@ input {
 
 
 input::placeholder {
-    color: rgb(113, 113, 113);
+    color: rgb(42, 35, 28);
 }
 
 
@@ -173,29 +186,38 @@ button {
 
 
     margin-top: 20px;
-    transition: 0.2s;
+    transition: 0.1s;
 
     font-size: 1.3rem;
 
     color: white;
-    background-color: rgb(156, 106, 185);
+    background-color: rgb(138, 120, 89);
 }
 
 
 
 button:hover {
-    transform: scale(1.03);
-    box-shadow: rgb(160, 160, 160) 0px 0px 20px 1px;
+    transform: scale(1.01);
+
+    color: rgb(138, 120, 89);
+    background-color: white;
+    border: 2px solid rgb(138, 120, 89);
 }
 
 
 span {
     margin-top: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: 1s;
 
     display: none;
 
     font-size: 1.2rem;
     align-self: center;
+}
+
+
+.cardsContainer img {
+    width: auto;
+    height: 120px;
 }

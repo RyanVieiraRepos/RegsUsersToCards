@@ -31,7 +31,7 @@ const fForm = () => {
 
 const fSendUser = async () => {
     const APIreg = "https://consuming-an-api.vercel.app/registrar"
-    
+
 }
 
 
@@ -77,9 +77,16 @@ const fRenderCards = () => {
     console.log('rendering...' + usersArr)
 }
 
+const fUsersLoadingState = () => {
 
+    const usersDiv = document.getElementById('cardsContainer')
 
+    while (usersDiv.childNodes.length === 0) {
+        console.log('a')
+    }
+}
 
+fUsersLoadingState()
 
 fGetUsers()
 
