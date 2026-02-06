@@ -70,8 +70,9 @@ body {
     font-size: 1.6rem;
     transition: 0.3s;
     cursor: pointer;
-    padding-right: 30px;
-    padding-left: 30px;
+    margin-top: 30px;
+    padding-right: 6vw;
+    padding-left: 6vw;
 }
 
 .header strong:hover {

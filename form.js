@@ -21,17 +21,31 @@ const fForm = () => {
 
         setTimeout(() => {
             document.getElementById('fillEm').style.display = 'none'
-        }, 3000)
+        }, 2000)
 
     } else {
-        fSendUser()
+        fSendUser(nome, sobrenome, email, descrição)
     }
 }
 
 
-const fSendUser = async () => {
+const fSendUser = async (nome, sobrenome, email, descrição) => {
     const APIreg = "https://consuming-an-api.vercel.app/registrar"
+    let user = {
+        nome, sobrenome, email, descrição
+    }
+    console.log(user)
 
+
+    // try{
+
+
+    //     if(){
+
+    //     }
+    // }catch{
+
+    // }
 }
 
 
