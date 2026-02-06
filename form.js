@@ -44,7 +44,7 @@ const fGetUsers = async () => {
 
             response.json()
                 .then(json => {
-                    usersArr.push(json)
+                    usersArr = json
                     console.log(usersArr)
                     fRenderCards()
                 })
@@ -64,11 +64,12 @@ const fRenderCards = () => {
 
         container.innerHTML += `
            <div class='card'>
+           <img src='./image.png'/>
                     <strong>${user.nome}</strong>
                     <strong>${user.idade} anos de idade</strong>
-                <div class='descCont'>
+                
                     <strong>${user.descrição}</strong>
-                </div>
+                
             </div>
     `
     }
@@ -77,16 +78,9 @@ const fRenderCards = () => {
     console.log('rendering...' + usersArr)
 }
 
-const fUsersLoadingState = () => {
 
-    const usersDiv = document.getElementById('cardsContainer')
 
-    while (usersDiv.childNodes.length === 0) {
-        console.log('a')
-    }
-}
 
-fUsersLoadingState()
 
 fGetUsers()
 

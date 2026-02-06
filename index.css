@@ -1,3 +1,31 @@
+@media screen and (max-width: 1200px) {
+    .mainContainer {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+    }
+
+    form {
+
+        margin-bottom: 5vw !important;
+    }
+
+    .card {
+        width: 80% !important;
+    }
+
+
+}
+
+
+
+
+
+
+
 body {
 
     display: flex;
@@ -58,62 +86,118 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 
+
     width: 100%;
 
     margin-top: 6vw;
+
+
 }
 
 
+
+
+
+
+
+
+
+.usersContainer {
+    background-color: rgb(231, 231, 231);
+    border-radius: 10px;
+    box-shadow: 0.02px 0.02px 10px 1px rgb(71, 71, 71);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px;
+
+    width: clamp(220px, 70%, 700px);
+
+    margin: 30px;
+
+
+}
+
+.usersContainer strong:first-child {
+    font-size: 1.6rem;
+    color: rgb(0, 0, 0);
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
 
 
 
 
 .card {
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(142, 121, 94);
 
     padding: 10px;
-    width: 300PX;
+    width: 40%;
+    height: 400px;
+
 
     display: flex;
     flex-direction: column;
-    border-top: 20px SOLID rgb(138, 120, 89);
+
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
+    margin: 1vw;
+    color: white;
 
 
 }
+
+.card img {
+    flex: 1;
+
+    align-self: center;
+    width: 90%;
+    height: auto;
+    margin: 8px;
+}
+
+.card strong {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 90%;
+}
+
+.strong:first-child {
+    font-size: 1.3rem;
+}
+
+.card ::-webkit-scrollbar {
+    height: 5px;
+    background: none;
+}
+
+.card ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
 
 .descCont {
     overflow: scroll;
-    font-size: 1rem;
+    height: 80px;
+
+
 }
 
-.card strong:nth-child(1) {
-    font-size: 1.2rem;
-}
-
-
-
-
-
-.lineContainer {
+.descCont strong {
     width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 50px;
 }
 
-.lineContainer strong {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 30px;
-    width: 600px;
-    font-size: 1.3rem;
-    color: rgb(255, 255, 255);
-    border-bottom: solid 1px rgb(255, 255, 255);
-}
 
 
 
@@ -129,12 +213,14 @@ form {
     flex-direction: column;
     padding: 30px;
     border-radius: 10px;
-
+    width: clamp(220px, 400px, 40%);
 
     background-color: rgb(231, 231, 231);
 
     height: 380px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    margin: 30px;
 
 
 }
@@ -149,7 +235,7 @@ form strong {
 }
 
 input {
-    width: 400px;
+    width: 90%;
     padding-top: 14px;
     padding-left: 4px;
     margin: 10px;
@@ -202,22 +288,4 @@ button:hover {
     color: rgb(138, 120, 89);
     background-color: white;
     border: 2px solid rgb(138, 120, 89);
-}
-
-
-span {
-    margin-top: 10px;
-    color: rgb(255, 255, 255);
-    transition: 1s;
-
-    display: none;
-
-    font-size: 1.2rem;
-    align-self: center;
-}
-
-
-.cardsContainer img {
-    width: auto;
-    height: 120px;
 }
