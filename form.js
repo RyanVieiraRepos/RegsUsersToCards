@@ -39,6 +39,20 @@ const fSendUser = async (nome, sobrenome, email, descrição) => {
 
     // try{
 
+    console.log('enviando')
+    fetch(APIreg, {                  //fetch,metodo, header com tipo de dado (especificação necessaria),  
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }, body: JSON.stringify(user)  // CONTEUDO, objeto js para json
+    }).then(res => {
+        if (res.ok) {
+            console.log('user sent:' + res.status)
+        } else {
+            console.log('error while sending user:' + res.status)
+        }
+    }).catch(err => { console.error(err) })
+
 
     //     if(){
 
