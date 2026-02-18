@@ -91,7 +91,7 @@ const fRenderCards = () => {
 
         container.innerHTML += `
            <div class='card'>
-           <img src='./image.png'/>
+           <img src='image.png'/>
                     <strong>${user.nome}</strong>
                     <strong>${user.idade} anos de idade</strong>
                 
